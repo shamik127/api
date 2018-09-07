@@ -2,11 +2,13 @@
 <div>
     <MainNav :showModal="showModal" v-on:toggleModal="showModal = !showModal"/>
     <Loader :loading="loading"/>
-
+  <transition name="enter" >
     <Modal v-on:toggleModal="showModal = !showModal" v-if="showModal" v-cloak/>
+  </transition>
     <div class="row" v-if="!loading">
-
+<transition appear>
       <SideBar :article="article"/>
+</transition>
       <div class="col-md-7 content">
         <div class="main__content">
             <BackgroundLogo />
@@ -150,7 +152,6 @@ p {
 }
 
 .sd__nav {
-  
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -49278,7 +49278,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n#app {\r\n  width: 100%;\n}\ndiv.row {\r\n  margin: 0 auto;\r\n  width: 100%;\r\n  height: 100vh;\n}\np {\r\n  margin: 0;\n}\n.content {\r\n  padding-right: 0;\r\n  padding-left: 0;\n}\n.content > div {\r\n  padding: 2em 3em;\n}\n.main__nav {\r\n  padding: 1.8em 2em;\n}\n.main__nav-r1 {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  -ms-flex-wrap: wrap;\r\n      flex-wrap: wrap;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\n}\n.main__nav-r1 > span {\r\n  font-size: 1.5em;\r\n  font-weight: 800;\r\n  line-height: 1.5em;\r\n  margin: 0;\n}\n.main__nav-r1 .logo-txt {\r\n  font-size: 0.8em;\r\n  margin: 0 auto 0 4em;\n}\n.main__nav-r1-list {\r\n  margin: 0 2em 0 auto;\n}\n.main__nav-r1-list span {\r\n  padding: 0 0.7em;\r\n  font-weight: 700;\r\n  font-size: 0.75em;\n}\n.main__nav-r1-list button {\r\n  font-weight: 700;\r\n  font-size: 0.75em;\n}\n.sd__nav {\r\n  \r\n  display: -webkit-box;\r\n  \r\n  display: -ms-flexbox;\r\n  \r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  padding: 3em 2em;\n}\n.sd__nav span {\r\n  margin: 1em 0;\n}\n.sd__nav p {\r\n  text-align: center;\r\n  text-decoration: underline;\r\n  font-size: 0.9rem;\n}\n.pre__grid {\n}\n.sd__nav button {\r\n  width: 90%;\r\n  margin: 3em auto;\r\n  background: #0d7db2;\r\n  color: #ffffff;\r\n  font-size: 0.7em;\r\n  font-weight: 700;\r\n  letter-spacing: 0.06em;\r\n  word-spacing: 0.1em;\n}\n.edt__choise {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  background: #f1f2f3;\n}\n.edt__choise-intro {\r\n  text-transform: uppercase;\r\n  font-weight: 700;\n}\n.edt__choise-title {\r\n  font-weight: 700;\r\n  color: #0d7db2;\r\n  text-decoration: underline;\n}\n.edt__choise-author {\r\n  display: inline-block;\r\n  background: #0d7db2;\r\n  color: #fff;\r\n  font-size: 0.8em;\r\n  padding: 0.5em 0.8em;\r\n  font-weight: 700;\r\n  margin-top: 3em;\n}\n.edt__choise-description {\r\n  width: 70%;\r\n  margin-top: 3em;\r\n  padding-left: 2em;\n}\n.main__content {\r\n  position: relative;\n}\n.main__content .bkg {\r\n  position: absolute;\r\n  z-index: -1;\r\n  pointer-events: none;\r\n  width: 100%;\r\n  height: 100vh;\r\n  left: 0;\r\n  top: 5em;\n}\n#beaker-atom {\r\n  opacity: 0.05;\n}\n.main__content-intro {\r\n  font-weight: 700;\r\n  text-decoration: underline;\n}\n.main__content-author {\r\n  text-transform: uppercase;\r\n  margin-bottom: 1.5em;\r\n  font-weight: bold;\n}\n.main__content-list {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  margin-bottom: 2em;\n}\n.main__content-list span:nth-child(1) {\r\n  font-weight: bold;\n}\n.main__content-social {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  padding: 0.8em 0;\n}\n.main__content-social span {\r\n  padding: 1em;\n}\n.main__content-social span:nth-child(1) {\r\n  padding-left: 0em;\r\n  margin-left: 0;\n}\n.main__content-social span:nth-child(1) {\r\n  color: #1E88E5;\n}\n.main__content-social span:nth-child(2) {\r\n  color: #f44336;\n}\n.main__content-social span:nth-child(3) {\r\n  color: #6A1B9A;\n}\n.main__content-list span {\r\n  text-transform: uppercase;\r\n  padding: 0 1.5em;\n}\n.main__content-list span:nth-child(1) {\r\n  padding-left: 0;\n}\n.main__content-title {\r\n  padding-right: 2em;\r\n  text-decoration: underline;\n}\n.grid {\r\n  display: grid;\r\n  width: 100%;\r\n  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));\r\n  grid-auto-rows: 1fr;\r\n  grid-gap: 2em;\n}\n.grid__item {\r\n  padding: 1em 2em;\r\n  border-bottom: 1px solid #e3e3e3;\n}\n.sd__bar {\r\n  padding: 2em 3em;\n}\n.sd__bar-intro {\r\n  font-size: 1.5em;\r\n  font-weight: 700;\r\n  margin-bottom: 1.5em;\r\n  text-decoration: underline;\n}\n.sd__bar-tags {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  -ms-flex-wrap: wrap;\r\n      flex-wrap: wrap;\r\n  margin-bottom: 2em;\n}\n.sd__bar-tags > span {\r\n  margin: 0 1em 0.8em 0;\r\n  text-transform: uppercase;\n}\n.sd__bar-tags > span:nth-child(1) {\r\n  font-weight: bold;\n}\n.experts__logo-container {\r\n  width: 100%;\r\n  margin-bottom: 2em;\n}\n.experts__logo {\r\n  opacity: 0.9;\n}\n.checked {\r\n    color: orange;\n}\n.intro__content {\r\n  margin-top: 2em;\r\n  padding: 1em 0 3em 3em;\n}\n.intro__content p{\r\n  margin: 1em 0 2em 0;\r\n  text-decoration: underline;\n}\n.intro__content button{\r\n  font-weight: bold;\r\n  font-size: 0.8em;\r\n  border-radius: 0;\n}\r\n\r\n\r\n", ""]);
+exports.push([module.i, "\n#app {\r\n  width: 100%;\n}\ndiv.row {\r\n  margin: 0 auto;\r\n  width: 100%;\r\n  height: 100vh;\n}\np {\r\n  margin: 0;\n}\n.content {\r\n  padding-right: 0;\r\n  padding-left: 0;\n}\n.content > div {\r\n  padding: 2em 3em;\n}\n.main__nav {\r\n  padding: 1.8em 2em;\n}\n.main__nav-r1 {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  -ms-flex-wrap: wrap;\r\n      flex-wrap: wrap;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\n}\n.main__nav-r1 > span {\r\n  font-size: 1.5em;\r\n  font-weight: 800;\r\n  line-height: 1.5em;\r\n  margin: 0;\n}\n.main__nav-r1 .logo-txt {\r\n  font-size: 0.8em;\r\n  margin: 0 auto 0 4em;\n}\n.main__nav-r1-list {\r\n  margin: 0 2em 0 auto;\n}\n.main__nav-r1-list span {\r\n  padding: 0 0.7em;\r\n  font-weight: 700;\r\n  font-size: 0.75em;\n}\n.main__nav-r1-list button {\r\n  font-weight: 700;\r\n  font-size: 0.75em;\n}\n.sd__nav {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  padding: 3em 2em;\n}\n.sd__nav span {\r\n  margin: 1em 0;\n}\n.sd__nav p {\r\n  text-align: center;\r\n  text-decoration: underline;\r\n  font-size: 0.9rem;\n}\n.pre__grid {\n}\n.sd__nav button {\r\n  width: 90%;\r\n  margin: 3em auto;\r\n  background: #0d7db2;\r\n  color: #ffffff;\r\n  font-size: 0.7em;\r\n  font-weight: 700;\r\n  letter-spacing: 0.06em;\r\n  word-spacing: 0.1em;\n}\n.edt__choise {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  background: #f1f2f3;\n}\n.edt__choise-intro {\r\n  text-transform: uppercase;\r\n  font-weight: 700;\n}\n.edt__choise-title {\r\n  font-weight: 700;\r\n  color: #0d7db2;\r\n  text-decoration: underline;\n}\n.edt__choise-author {\r\n  display: inline-block;\r\n  background: #0d7db2;\r\n  color: #fff;\r\n  font-size: 0.8em;\r\n  padding: 0.5em 0.8em;\r\n  font-weight: 700;\r\n  margin-top: 3em;\n}\n.edt__choise-description {\r\n  width: 70%;\r\n  margin-top: 3em;\r\n  padding-left: 2em;\n}\n.main__content {\r\n  position: relative;\n}\n.main__content .bkg {\r\n  position: absolute;\r\n  z-index: -1;\r\n  pointer-events: none;\r\n  width: 100%;\r\n  height: 100vh;\r\n  left: 0;\r\n  top: 5em;\n}\n#beaker-atom {\r\n  opacity: 0.05;\n}\n.main__content-intro {\r\n  font-weight: 700;\r\n  text-decoration: underline;\n}\n.main__content-author {\r\n  text-transform: uppercase;\r\n  margin-bottom: 1.5em;\r\n  font-weight: bold;\n}\n.main__content-list {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  margin-bottom: 2em;\n}\n.main__content-list span:nth-child(1) {\r\n  font-weight: bold;\n}\n.main__content-social {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  padding: 0.8em 0;\n}\n.main__content-social span {\r\n  padding: 1em;\n}\n.main__content-social span:nth-child(1) {\r\n  padding-left: 0em;\r\n  margin-left: 0;\n}\n.main__content-social span:nth-child(1) {\r\n  color: #1E88E5;\n}\n.main__content-social span:nth-child(2) {\r\n  color: #f44336;\n}\n.main__content-social span:nth-child(3) {\r\n  color: #6A1B9A;\n}\n.main__content-list span {\r\n  text-transform: uppercase;\r\n  padding: 0 1.5em;\n}\n.main__content-list span:nth-child(1) {\r\n  padding-left: 0;\n}\n.main__content-title {\r\n  padding-right: 2em;\r\n  text-decoration: underline;\n}\n.grid {\r\n  display: grid;\r\n  width: 100%;\r\n  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));\r\n  grid-auto-rows: 1fr;\r\n  grid-gap: 2em;\n}\n.grid__item {\r\n  padding: 1em 2em;\r\n  border-bottom: 1px solid #e3e3e3;\n}\n.sd__bar {\r\n  padding: 2em 3em;\n}\n.sd__bar-intro {\r\n  font-size: 1.5em;\r\n  font-weight: 700;\r\n  margin-bottom: 1.5em;\r\n  text-decoration: underline;\n}\n.sd__bar-tags {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  -ms-flex-wrap: wrap;\r\n      flex-wrap: wrap;\r\n  margin-bottom: 2em;\n}\n.sd__bar-tags > span {\r\n  margin: 0 1em 0.8em 0;\r\n  text-transform: uppercase;\n}\n.sd__bar-tags > span:nth-child(1) {\r\n  font-weight: bold;\n}\n.experts__logo-container {\r\n  width: 100%;\r\n  margin-bottom: 2em;\n}\n.experts__logo {\r\n  opacity: 0.9;\n}\n.checked {\r\n    color: orange;\n}\n.intro__content {\r\n  margin-top: 2em;\r\n  padding: 1em 0 3em 3em;\n}\n.intro__content p{\r\n  margin: 1em 0 2em 0;\r\n  text-decoration: underline;\n}\n.intro__content button{\r\n  font-weight: bold;\r\n  font-size: 0.8em;\r\n  border-radius: 0;\n}\r\n\r\n\r\n", ""]);
 
 // exports
 
@@ -49322,6 +49322,8 @@ module.exports = function listToStyles (parentId, list) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -51641,22 +51643,34 @@ var render = function() {
       _vm._v(" "),
       _c("Loader", { attrs: { loading: _vm.loading } }),
       _vm._v(" "),
-      _vm.showModal
-        ? _c("Modal", {
-            on: {
-              toggleModal: function($event) {
-                _vm.showModal = !_vm.showModal
-              }
-            }
-          })
-        : _vm._e(),
+      _c(
+        "transition",
+        { attrs: { name: "enter" } },
+        [
+          _vm.showModal
+            ? _c("Modal", {
+                on: {
+                  toggleModal: function($event) {
+                    _vm.showModal = !_vm.showModal
+                  }
+                }
+              })
+            : _vm._e()
+        ],
+        1
+      ),
       _vm._v(" "),
       !_vm.loading
         ? _c(
             "div",
             { staticClass: "row" },
             [
-              _c("SideBar", { attrs: { article: _vm.article } }),
+              _c(
+                "transition",
+                { attrs: { appear: "" } },
+                [_c("SideBar", { attrs: { article: _vm.article } })],
+                1
+              ),
               _vm._v(" "),
               _c("div", { staticClass: "col-md-7 content" }, [
                 _c(
