@@ -1,8 +1,10 @@
 <template>
 <div>
-<MainNav />
+    <MainNav :showModal="showModal" v-on:toggleModal="showModal = !showModal"/>
     <Loader :loading="loading"/>
-    <div class="row"  v-if="!loading">
+
+    <Modal v-on:toggleModal="showModal = !showModal" v-if="showModal" v-cloak/>
+    <div class="row" v-if="!loading">
 
       <SideBar :article="article"/>
       <div class="col-md-7 content">
@@ -31,12 +33,14 @@ var MainLogo = require('./MainLogo.vue');
 var MainNav = require('./MainNav.vue');
 var SideBar = require('./SideBar.vue');
 var ArticleGrid = require('./ArticleGrid.vue');
+var Modal = require('./Modal.vue');
 
 export default {
   name: "App",
   components: {
     MainNav: MainNav,
     Loader: Loader,
+    Modal: Modal,
     IntroContent: IntroContent,
     SideBar: SideBar,
     MainLogo: MainLogo,
@@ -49,6 +53,7 @@ export default {
       loading: true,
       articles: [],
       article: {},
+      showModal: false,
       featuredArticles: [],
       tags: [
         "story",
@@ -66,7 +71,7 @@ export default {
   created: function() {
     this.$http
       .get(
-        "https://newsapi.org/v1/articles?source=cnn&apiKey=d4850e40dbe941518185860fd3a35655"
+        "https://newsapi.org/v1/articles?source=reuters&apiKey=d4850e40dbe941518185860fd3a35655"
       )
       .then(response => {
         this.articles = response.data.articles;
@@ -145,7 +150,7 @@ p {
 }
 
 .sd__nav {
-  border-right: 1px solid #e3e3e3;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -169,7 +174,7 @@ p {
 .sd__nav button {
   width: 90%;
   margin: 3em auto;
-  background: #3c90af;
+  background: #0d7db2;
   color: #ffffff;
   font-size: 0.7em;
   font-weight: 700;
@@ -191,13 +196,13 @@ p {
 
 .edt__choise-title {
   font-weight: 700;
-  color: #3c90af;
+  color: #0d7db2;
   text-decoration: underline;
 }
 
 .edt__choise-author {
   display: inline-block;
-  background: #3c90af;
+  background: #0d7db2;
   color: #fff;
   font-size: 0.8em;
   padding: 0.5em 0.8em;
@@ -359,4 +364,6 @@ p {
   font-size: 0.8em;
   border-radius: 0;
 }
+
+
 </style>
