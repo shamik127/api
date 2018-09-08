@@ -23,6 +23,44 @@ export default {
 <style scoped>
 
 .main__nav {
+  padding: 1em 2em;
+}
+
+.main__nav-r1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.main__nav-r1 > span {
+  font-size: 1.5em;
+  font-weight: 800;
+  line-height: 1.5em;
+  margin: 0;
+
+}
+
+.main__nav-r1 .logo-txt {
+  font-size: 0.8em;
+  margin: 0 auto 0 4em;
+}
+
+.main__nav-r1-list {
+  margin: 0 2em 0 auto;
+}
+
+.main__nav-r1-list span {
+  font-weight: 700;
+  font-size: 0.75em;
+}
+
+.main__nav-r1-list button {
+  font-weight: 700;
+  font-size: 0.75em;
+}
+
+.main__nav {
   user-select: none;
 }
 

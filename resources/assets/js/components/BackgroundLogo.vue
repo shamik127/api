@@ -70,5 +70,17 @@ export default {
 </script>
 
 <style scoped>
+.bkg {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 5em;
+}
 
+#beaker-atom {
+  opacity: 0.05;
+}
 </style>
