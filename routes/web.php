@@ -15,3 +15,6 @@ Route::get('/login/{social}/callback', 'AuthenticationController@getSocialCallba
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/articles/{?id}', 'ArticleController@index');
+
