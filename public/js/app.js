@@ -25366,18 +25366,15 @@ try {
 
 window.axios = __webpack_require__(8);
 
-//window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 var token = document.head.querySelector('meta[name="csrf-token"]');
 
-/*
 if (token) {
     window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
 } else {
     console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
-*/
 
 // import Echo from 'laravel-echo'
 
@@ -49229,7 +49226,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuex
 /* unused harmony export install */
 /* unused harmony export mapState */
 /* unused harmony export mapMutations */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return mapGetters; });
+/* unused harmony export mapGetters */
 /* unused harmony export mapActions */
 /* unused harmony export createNamespacedHelpers */
 /**
@@ -50251,7 +50248,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n#app {\r\n  width: 100%;\n}\ndiv.row {\r\n  margin: 0 auto;\r\n  width: 100%;\r\n  height: 100vh;\n}\np {\r\n  margin: 0;\n}\n.content {\r\n  padding-right: 0;\r\n  padding-left: 0;\n}\n.content > div {\r\n  padding: 2em 3em;\n}\n.edt__choise-author {\r\n  display: inline-block;\r\n  background: #0d7db2;\r\n  color: #fff;\r\n  font-size: 0.8em;\r\n  padding: 0.5em 0.8em;\r\n  font-weight: 700;\r\n  margin-top: 3em;\n}\n.main__content {\r\n  position: relative;\n}\n.main__content-intro {\r\n  font-weight: 700;\n}\n.main__content-intro span {\r\n  font-weight: 100;\r\n  display: block;\n}\n.checked {\r\n  color: orange;\n}\r\n", ""]);
+exports.push([module.i, "\n#app {\r\n  width: 100%;\n}\ndiv.row {\r\n  margin: 0 auto;\r\n  width: 100%;\r\n  height: 100vh;\n}\np {\r\n  margin: 0;\n}\n.content {\r\n  padding-right: 0;\r\n  padding-left: 0;\n}\n.content > div {\r\n  padding: 2em 3em;\n}\n.edt__choise-author {\r\n  display: inline-block;\r\n  background: #0d7db2;\r\n  color: #fff;\r\n  font-size: 0.8em;\r\n  padding: 0.5em 0.8em;\r\n  font-weight: 700;\r\n  margin-top: 3em;\n}\n.main__content {\r\n  position: relative;\n}\n.main__content-intro {\r\n  font-weight: 700;\n}\n.main__content-intro span {\r\n  font-weight: 100;\r\n  display: block;\n}\n.checked {\r\n    color: orange;\n}\r\n", ""]);
 
 // exports
 
@@ -50295,9 +50292,6 @@ module.exports = function listToStyles (parentId, list) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(46);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 //
 //
 //
@@ -50323,8 +50317,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
-
-
 
 var FileUplaod = __webpack_require__(52);
 var Loader = __webpack_require__(57);
@@ -50349,9 +50341,6 @@ var Modal = __webpack_require__(91);
     BackgroundLogo: BackgroundLogo,
     ArticleGrid: ArticleGrid
   },
-
-  computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["b" /* mapGetters */])([article])),
-
   data: function data() {
     return {
       loading: true,
@@ -50363,25 +50352,18 @@ var Modal = __webpack_require__(91);
     };
   },
 
-  mounted: function mounted() {
-    this.$store.dispatch("loadArticles");
-    /*
-        axios
-          .get(
-            "https://newsapi.org/v1/articles?source=reuters&apiKey=d4850e40dbe941518185860fd3a35655"
-          )
-          .then(response => {
-            this.articles = response.data.articles;
-            this.article = this.articles[1];
-            this.featuredArticles = this.articles.slice(1, 7);
-            this.loading = false;
-          })
-          .catch(err => {
-            console.log(err);
-          });
-          */
-  },
-  created: function created() {}
+  created: function created() {
+    var _this = this;
+
+    this.$http.get("https://newsapi.org/v1/articles?source=reuters&apiKey=d4850e40dbe941518185860fd3a35655").then(function (response) {
+      _this.articles = response.data.articles;
+      _this.article = _this.articles[1];
+      _this.featuredArticles = _this.articles.slice(1, 7);
+      _this.loading = false;
+    }).catch(function (err) {
+      console.log(err);
+    });
+  }
 });
 
 /***/ }),
@@ -52782,19 +52764,19 @@ var articles = {
             var commit = _ref.commit;
 
             commit('setArticlesLoadStatus', 1);
-            __WEBPACK_IMPORTED_MODULE_0__api_article_js__["a" /* default */].getArticles().then(function (response) {
+            __WEBPACK_IMPORTED_MODULE_0__api_article_js__["a" /* default */].getCafes().then(function (response) {
                 commit('setArticles', response.data);
                 commit('setArticlesLoadStatus', 2);
             }).catch(function (error) {
                 commit('setArticlesLoadStatus', 3);
-                console.log("olla");
+                console.log(error);
             });
         },
         loadArticle: function loadArticle(_ref2, data) {
             var commit = _ref2.commit;
 
             commit('setArticleLoadStatus', 1);
-            __WEBPACK_IMPORTED_MODULE_0__api_article_js__["a" /* default */].getArticle(data).then(function (response) {
+            __WEBPACK_IMPORTED_MODULE_0__api_article_js__["a" /* default */].getArticle(articleId).then(function (response) {
                 commit('setArticle', response.data);
                 commit('setArticleLoadStatus', 2);
             }).catch(function (error) {
@@ -52828,14 +52810,8 @@ var articles = {
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    /*
-    getArticles: function() {
-        return axios.get(EXPERTS_CONFIG.API_URL + '/articles');
-    },
-    */
-
     getArticles: function getArticles() {
-        return axios.get("https://newsapi.org/v1/articles?source=reuters&apiKey=d4850e40dbe941518185860fd3a35655");
+        return axios.get(__WEBPACK_IMPORTED_MODULE_0__config_js__["a" /* EXPERTS_CONFIG */].API_URL + '/articles');
     },
 
     getArticle: function getArticle(articleId) {

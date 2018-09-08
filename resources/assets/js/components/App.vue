@@ -24,18 +24,15 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-
-
 var FileUplaod = require("./FileUpload.vue");
 var Loader = require("./Loader.vue");
-var BackgroundLogo = require("./BackgroundLogo.vue");
-var IntroContent = require("./IntroContent.vue");
-var MainLogo = require("./MainLogo.vue");
-var MainNav = require("./MainNav.vue");
-var SideBar = require("./SideBar.vue");
-var ArticleGrid = require("./ArticleGrid.vue");
-var Modal = require("./Modal.vue");
+var BackgroundLogo = require('./BackgroundLogo.vue');
+var IntroContent = require('./IntroContent.vue');
+var MainLogo = require('./MainLogo.vue');
+var MainNav = require('./MainNav.vue');
+var SideBar = require('./SideBar.vue');
+var ArticleGrid = require('./ArticleGrid.vue');
+var Modal = require('./Modal.vue');
 
 export default {
   name: "App",
@@ -50,13 +47,6 @@ export default {
     BackgroundLogo: BackgroundLogo,
     ArticleGrid: ArticleGrid
   },
-
-  computed: {
-    ...mapGetters([
-      article
-    ])
-  },
-
   data() {
     return {
       loading: true,
@@ -77,10 +67,8 @@ export default {
       ]
     };
   },
-  mounted: function() {
-    this.$store.dispatch("loadArticles");
-/*
-    axios
+  created: function() {
+    this.$http
       .get(
         "https://newsapi.org/v1/articles?source=reuters&apiKey=d4850e40dbe941518185860fd3a35655"
       )
@@ -93,9 +81,7 @@ export default {
       .catch(err => {
         console.log(err);
       });
-      */
-  },
-  created: function() {}
+  }
 };
 </script>
 
@@ -147,6 +133,6 @@ p {
 }
 
 .checked {
-  color: orange;
+    color: orange;
 }
 </style>
