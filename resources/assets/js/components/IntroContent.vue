@@ -34,8 +34,8 @@
             <p style="margin-top: 2em;">
               {{article.description}}
             </p>
-            <button type="button" class="btn btn-outline-secondary shadow-lg">Find an expert</button>
-            <button type="button" class="btn btn-secondary shadow-lg">Articles by experts</button>
+            <button type="button" class="btn">Find an expert</button>
+            <button type="button" class="btn">Articles by experts</button>
             
           </div>
 </template>
@@ -48,6 +48,15 @@ export default {
 }
 </script>
 <style scoped>
+
+button:last-child {
+  background: #111;
+  color: white;
+}
+
+button:first-child {
+
+}
 
 .intro__content {
   margin-top: 2em;
