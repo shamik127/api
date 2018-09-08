@@ -49203,13 +49203,18 @@ if (typeof window !== 'undefined' && window.Vue) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_articles_js__ = __webpack_require__(101);
 
 
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */]);
 
+
+
 /* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */].Store({
-    modules: {}
+    modules: {
+        articles: __WEBPACK_IMPORTED_MODULE_2__modules_articles_js__["a" /* articles */]
+    }
 }));
 
 /***/ }),
@@ -52718,6 +52723,122 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return articles; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__api_article_js__ = __webpack_require__(102);
+
+
+var articles = {
+    state: {
+        articles: [],
+        articlesLoadStatus: 0,
+        article: {},
+        articleLoadStatus: 0
+    },
+
+    getters: {
+        getArticles: function getArticles(state) {
+            return state.articles;
+        },
+        getArticlesLoadStatus: function getArticlesLoadStatus(state) {
+            return state.articlesLoadStatus;
+        },
+        getArticle: function getArticle(state) {
+            return state.article;
+        },
+        getArticleLoadStatus: function getArticleLoadStatus(state) {
+            return state.articleLoadStatus;
+        }
+    },
+
+    actions: {
+        loadArticles: function loadArticles(_ref) {
+            var commit = _ref.commit;
+
+            commit('setArticlesLoadStatus', 1);
+            __WEBPACK_IMPORTED_MODULE_0__api_article_js__["a" /* default */].getCafes().then(function (response) {
+                commit('setArticles', response.data);
+                commit('setArticlesLoadStatus', 2);
+            }).catch(function (error) {
+                commit('setArticlesLoadStatus', 3);
+                console.log(error);
+            });
+        },
+        loadArticle: function loadArticle(_ref2, data) {
+            var commit = _ref2.commit;
+
+            commit('setArticleLoadStatus', 1);
+            __WEBPACK_IMPORTED_MODULE_0__api_article_js__["a" /* default */].getArticle(articleId).then(function (response) {
+                commit('setArticle', response.data);
+                commit('setArticleLoadStatus', 2);
+            }).catch(function (error) {
+                commit('setArticleLoadStatus', 3);
+                console.log(error);
+            });
+        }
+    },
+    mutations: {
+        setArticles: function setArticles(state, data) {
+            state.articles = data;
+        },
+        setArticlesLoadStatus: function setArticlesLoadStatus(state, data) {
+            state.articlesLoadStatus = data;
+        },
+        setArticle: function setArticle(state, data) {
+            state.article = data;
+        },
+        setArticleLoadStatus: function setArticleLoadStatus(state, data) {
+            state.articleLoadStatus = data;
+        }
+    }
+};
+
+/***/ }),
+/* 102 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__config_js__ = __webpack_require__(103);
+
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+    getArticles: function getArticles() {
+        return axios.get(__WEBPACK_IMPORTED_MODULE_0__config_js__["a" /* EXPERTS_CONFIG */].API_URL + '/articles');
+    },
+
+    getArticle: function getArticle(articleId) {
+        return axios.get(__WEBPACK_IMPORTED_MODULE_0__config_js__["a" /* EXPERTS_CONFIG */].API_URL + '/articles/' + articleId);
+    }
+});
+
+/***/ }),
+/* 103 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EXPERTS_CONFIG; });
+var api_url = '';
+
+switch ("development") {
+  case 'development':
+    api_url = 'http://localhost:8000/api/v1';
+    break;
+  case 'production':
+    api_url = 'https://roastandbrew.coffee/api/v1';
+    break;
+}
+
+var EXPERTS_CONFIG = {
+  API_URL: api_url
+};
 
 /***/ })
 /******/ ]);
