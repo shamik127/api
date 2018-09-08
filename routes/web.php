@@ -16,5 +16,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/articles/{?id}', 'ArticleController@index');
+Route::get('/articles/{id?}', 'ArticleController@index')->middleware('cors');
 

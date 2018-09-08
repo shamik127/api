@@ -1,12 +1,12 @@
 <template>
    <div class="grid">
             <div class="grid__item" v-for="featuredArticle in featuredArticles">
-                <p class="main__content-author">{{featuredArticle.author}}</p>
+                <p class="main__content-author">{{featuredArticle.title}}</p>
                 <p class="main__content-title">
                     {{featuredArticle.title}}
                 </p>
                 <p class="main__content-title">
-                    {{featuredArticle.description}}
+                    {{featuredArticle.body}}
                 </p> 
                 <div class="main__content-social">
                     <span class="oi oi-briefcase"></span>

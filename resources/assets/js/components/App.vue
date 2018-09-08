@@ -1,16 +1,16 @@
 <template>
 <div>
     <MainNav :showModal="showModal" v-on:toggleModal="showModal = !showModal"/>
-    <Loader :loading="loading"/>
+    
 
     <Modal v-on:toggleModal="showModal = !showModal" v-if="showModal" v-cloak/>
-    <div class="row" v-if="!loading">
+    <div class="row">
       <SideBar :article="article"/>
       <div class="col-md-7 content">
         <div class="main__content">
             <BackgroundLogo />
             <h1 class="main__content-intro display-4">Have any <span>scientific doubts?</span></h1>
-            <p class="edt__choise-author shadow-lg">{{article.author}}</p>
+            <p class="edt__choise-author shadow-lg">{{article.title}}</p>
             <IntroContent :article="article" />
             <ArticleGrid :featuredArticles="featuredArticles"/>
       </div>
@@ -49,11 +49,11 @@ export default {
   },
   data() {
     return {
-      loading: true,
-      articles: [],
-      article: {},
+      //loading: true,
+      //articles: [],
+      //article: {},
       showModal: false,
-      featuredArticles: [],
+      //featuredArticles: [],
       tags: [
         "story",
         "news",
@@ -68,6 +68,9 @@ export default {
     };
   },
   created: function() {
+    this.$store.dispatch('loadArticles');
+    this.$store.dispatch('loadArticle', 1);
+    /*
     this.$http
       .get(
         "https://newsapi.org/v1/articles?source=reuters&apiKey=d4850e40dbe941518185860fd3a35655"
@@ -81,6 +84,18 @@ export default {
       .catch(err => {
         console.log(err);
       });
+      */
+  },
+  computed: {
+    featuredArticles() {
+      return this.$store.getters.getArticles;
+    },
+    article() {
+      return this.$store.getters.getArticle;
+    },
+    articleLoadStatus() {
+      return this.$store.getters.articleLoadStatus;
+    }
   }
 };
 </script>

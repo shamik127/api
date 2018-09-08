@@ -26,7 +26,7 @@ export const articles = {
     actions: {
         loadArticles: function({commit}) {
             commit('setArticlesLoadStatus', 1);
-            ArticlesAPI.getCafes()
+            ArticlesAPI.getArticles()
             .then(function(response) {
                 commit('setArticles', response.data);
                 commit('setArticlesLoadStatus', 2);
@@ -38,7 +38,7 @@ export const articles = {
         },
         loadArticle: function({commit}, data) {
             commit('setArticleLoadStatus', 1);
-            ArticlesAPI.getArticle(articleId)
+            ArticlesAPI.getArticle(data)
             .then(function(response) {
                 commit('setArticle', response.data);
                 commit('setArticleLoadStatus', 2);
