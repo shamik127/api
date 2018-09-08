@@ -122,4 +122,12 @@ export default {
 </script>
 <style scoped>
 
+.experts__logo-container {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.experts__logo {
+  opacity: 0.9;
+}
 </style>

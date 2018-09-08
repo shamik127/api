@@ -1,9 +1,9 @@
 <template>
 <div class="modal__outer" @click.self="$emit('toggleModal')">
 
-<div class="modal__inner shadow-sm">
+<div class="modal__inner shadow-lg">
         <h1 class="display-4">
-            Join Medium
+            Join Us
         </h1>
         <p>
             Create an account to personalize your homepage, follow your favorite authors and publications, applaud stories you love, and more.
@@ -25,11 +25,12 @@ export default {
 };
 </script>
 <style scoped>
-
+h1 {
+}
 .modal__outer {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     top: 0;
     left: 0;
     z-index: 99;
@@ -38,6 +39,7 @@ export default {
 .modal__inner {
     border-radius: 10px;
 padding: 2em;
+padding-top: 1em;
 text-align: center;
   position: fixed;
   top: 50%;
