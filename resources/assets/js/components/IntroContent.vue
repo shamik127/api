@@ -32,7 +32,7 @@
 
 
             <p style="margin-top: 2em;">
-              {{article.description}}
+              {{article.body}}
             </p>
             <button type="button" class="btn">Find an expert</button>
             <button type="button" class="btn">Articles by experts</button>
