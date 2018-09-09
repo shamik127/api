@@ -50494,9 +50494,6 @@ var Modal = __webpack_require__(94);
     articleLoadStatus: function articleLoadStatus() {
       return this.$store.getters.articleLoadStatus;
     }
-  },
-  mounted: function mounted() {
-    console.log(this.article);
   }
 });
 
@@ -52337,7 +52334,7 @@ var render = function() {
       _c("MainLogo"),
       _vm._v(" "),
       _c("p", [
-        _vm._v("\n          " + _vm._s(_vm.article.body) + "\n        ")
+        _vm._v("\n          " + _vm._s(_vm.article.description) + "\n        ")
       ]),
       _vm._v(" "),
       _c("span", { staticClass: "oi oi-map" }),
