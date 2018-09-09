@@ -50199,7 +50199,11 @@ var articles = {
             var commit = _ref.commit;
 
             commit('setArticlesLoadStatus', 1);
+<<<<<<< HEAD
             __WEBPACK_IMPORTED_MODULE_0__api_article_js__["a" /* default */].getArticles().then(function (response) {
+=======
+            __WEBPACK_IMPORTED_MODULE_0__api_article_js__["a" /* default */].getCafes().then(function (response) {
+>>>>>>> add-file-upload
                 commit('setArticles', response.data);
                 commit('setArticlesLoadStatus', 2);
             }).catch(function (error) {
@@ -50211,7 +50215,11 @@ var articles = {
             var commit = _ref2.commit;
 
             commit('setArticleLoadStatus', 1);
+<<<<<<< HEAD
             __WEBPACK_IMPORTED_MODULE_0__api_article_js__["a" /* default */].getArticle(data).then(function (response) {
+=======
+            __WEBPACK_IMPORTED_MODULE_0__api_article_js__["a" /* default */].getArticle(articleId).then(function (response) {
+>>>>>>> add-file-upload
                 commit('setArticle', response.data);
                 commit('setArticleLoadStatus', 2);
             }).catch(function (error) {
@@ -50625,7 +50633,7 @@ var _this = this;
         handleSubmit: function handleSubmit() {
             var formData = new FormData();
             formData.append('file', _this.file);
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/', formData, {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/file/create', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },
