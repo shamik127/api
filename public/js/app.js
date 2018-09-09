@@ -50607,7 +50607,7 @@ var _this = this;
         handleSubmit: function handleSubmit() {
             var formData = new FormData();
             formData.append('file', _this.file);
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/', formData, {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/file/create', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },

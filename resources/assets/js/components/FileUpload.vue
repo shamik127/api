@@ -26,7 +26,7 @@ export default {
         handleSubmit: () => {
             let formData = new FormData();
             formData.append('file', this.file);
-            axios.post('/',
+            axios.post('/file/create',
             formData,
             {
                 headers: {
