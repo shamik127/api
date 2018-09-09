@@ -96,6 +96,9 @@ export default {
     articleLoadStatus() {
       return this.$store.getters.articleLoadStatus;
     }
+  },
+  mounted: function() {
+    console.log(this.article);
   }
 };
 </script>

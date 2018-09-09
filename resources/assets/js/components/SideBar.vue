@@ -2,7 +2,7 @@
           <div class="col-md-3 sd__nav">
           <MainLogo />
         <p>
-          {{article.description}}
+          {{article.body}}
         </p>
         <span class="oi oi-map"></span>
         <div>
